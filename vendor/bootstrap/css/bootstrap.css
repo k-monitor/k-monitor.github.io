@@ -640,7 +640,9 @@ pre code {
   margin-right: auto;
   margin-left: auto;
   margin-top: auto;
+  overflow: hidden;
 }
+
 
 @media (min-width: 576px) {
   .container {
@@ -668,10 +670,12 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .row {
