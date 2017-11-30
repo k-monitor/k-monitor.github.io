@@ -8,7 +8,7 @@
     </head>
     <body>
         
-    <div id="chart"><svg style="width:1800px;height:600px;"></svg></div>
+    <div id="chart"><svg style="width:1300; height:700;"></svg></div>
 
 
     <script>
@@ -58,8 +58,8 @@
             d3.select('#chart svg')
             .datum(datum)
             .transition().duration(500)
-            .attr('width', '1800')
-            .attr('height', 600)
+            .attr('width', "100%")
+            .attr('height', "300%")
             .call(chart);
 
 

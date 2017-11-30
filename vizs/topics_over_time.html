@@ -8,7 +8,7 @@
     </head>
     <body>
         
-    <div id="stackedareachart"><svg style="width:1800px;height:600px;"></svg></div>
+    <div id="stackedareachart"><svg style="width:1300px;height:600px;"></svg></div>
 
 
     <script>
@@ -54,8 +54,8 @@
         d3.select('#stackedareachart svg')
             .datum(datum)
             .transition().duration(500)
-            .attr('width', '1800')
-            .attr('height', 600)
+            .attr('width', "100%")
+            .attr('height', "300%")
             .call(chart);
 
 

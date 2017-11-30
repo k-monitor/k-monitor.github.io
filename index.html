@@ -1,123 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A parlament.hu felszólalásainak elemzése">
+    <meta name="author" content="K-Monitor">
 
-    <title>GLOW - K-Monitor</title>
+    <title>Hogyan és miről beszélnek a parlamentben?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body id="page-top">
 
-<!--
-     Navigation 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Parldata</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">Bevezetés</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link js-scroll-trigger" href="#hogyan">Hogyan beszélnek a parlamentben?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#mirol">Miről beszélnek a parlamentben?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#sum">Összefoglaló</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">K-Monitor</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
--->
 
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active">
-                <iframe class="embed-responsive-item" src="vizs/party_length.html" style="width:100vw;height:100vh;" frameBorder="0" scrolling="no"></iframe>
-            <div class="carousel-caption d-none d-md-block">
-              <p>Az egyes pártok felszólalásainak hossza karakterben mérve</p>
-            </div>
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong><br><br><br>Hogyan és miről beszélnek a magyar parlamentben?</strong>
+            </h1>
+            <hr>
           </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item">
-              <iframe class="embed-responsive-item" src="vizs/avg_ld.html" style="width:100vw;height:100vh;" frameBorder="0" scrolling="no"></iframe>
-            <div class="carousel-caption d-none d-md-block">
-              <p>Átlagos lexikai diverzitás az évek során</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item">
-              <iframe class="embed-responsive-item" src="vizs/party_ld.html" style="width:100vw;height:100vh;" frameBorder="0" scrolling="no"></iframe>
-            <div class="carousel-caption d-none d-md-block">
-              <p>Lexikai diverzitás pártonként</p>
-            </div>
-          </div>
-          <!-- Slide Four - Set the background image for this slide in the line below -->
-          <div class="carousel-item">
-              <iframe class="embed-responsive-item" src="vizs/topics_over_time.html" style="width:100vw;height:100vh;" frameBorder="0" scrolling="no"></iframe>
-            <div class="carousel-caption d-none d-md-block">
-              <p>Mikor milyen témákról beszéltek?</p>
-            </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Az Országgyűlés működésének legfontosabb követelménye a nyilvánosság. Egy demokrácia polgáraként jogunk van ahhoz, hogy a minket érintő legfontosabb döntések meghozataláról és a bennük részt vevőkről minden információhoz hozzájuthassunk. Ma már nem adja a TV a parlamenti üléseket, de az informatika fejlődése számos új lehetőséget kínál a törvényhozás sokdimenziós elemzésére. Ehhez a parlamenti adatok megnyitása szükséges: szkennelt oldalak helyett gépileg feldolgozható formában. A 2017-es nemzetközi Nyílt Jogalkotási Hét (GLOW) eseményeihez kapcsolódva a K-Monitor a magyar parlamenti adatok hasznosításával foglalkozó kutatásának első elemzését mutatja be.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tovább</a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </header>
 
-    <!-- Page Content -->
-    <section class="py-5">
-      <div class="container">
-        <h1>Lesz ez még szebb</h1>
-        <p>Még rá fogok jönni, hogyan lehet interakcióba lépni az iframe-be ágyazott vizukkal</p>
-      </div>
+    <section id="intro">
+    <div class="container">
+            <h1 align="center">Bevezetés<br></h1>
+        <p>A képviseleti demokrácia egyik legfontosabb helyszíne a parlament. Választott képviselőink az Országházban vitatják meg az életünkre hatással lévő törvényeket. A benyújtott törvényjavaslatok vitái során különféle témák merülnek fel, érvek és ellenérvek ütköznek. A plenáris üléseken egyebek mellett mód van napirenden kívüli felszólalásokra, interpellációkra és kérdésekre. Ezek révén formálódik a politikai napirend, amiről a közviták folynak. Ennek a folyamatnak a lehető legnagyobb nyilvánossága fontos közügy, hiszen a parlamentarizmus lényege éppen az, hogy a döntések nem zárt ajtók mögött születnek. A kormányok azonban folyamatos küzdelmet folytatnak a médiával, melynek során lépésről-lépésre kiszorították az újságírókat az <a href="http://www.mediakutato.hu/cikk/2006_03_osz/01_parlamenti_ulesek_nyilvanossag">ülésteremből</a>. Ma egyedül a közmédia kamerái lehetnek jelen a teremben, ám egyetlen csatornája sem közvetíti élőben az üléseket. Az érdeklődők sajtóbeszámolókból értesülhetnek a fejleményekről vagy visszakereshetik a beszédeket a Parlament honlapján elérhetővé tett felszólalások között. Általános probléma azonban, hogy a felület igen nehézkesen használható. Csapatunkkal egy eszközt fejlesztünk, melynek célja, hogy a megszólalásokat könnyen elérhetővé tegye az érdeklődők számára. Ebbe a munkába nyújt bepillantást jelen írás, amely azt vizsgálja, hogy hogyan beszéltek a képviselők és hogy mely témák merültek fel hangsúlyosabban az egyes időszakokban a rendszerváltástól napjainkig.
+        </p>
+        <h2 align="center">Hogyan készült a korpusz?<br></h2>
+        <p>Elemzésünk alapját a parlament.hu-n elérhető felszólalások alkotják, amelyeket gépi segítséggel töltöttünk le. A szöveget megszabadítottuk a gyakran előforduló töltelékszavaktól (pl.: “az”, “mert”, “hogy”), illetve az elemzés szempontjából irreleváns kifejezésektől (pl.: “tisztelt”, “képviselő”, “indítvány”). Az elemzést megelőzően elvégeztük a szöveg egységesítését (karakterkódolás egységesítése, kisbetűs alakra hozás, szótövezés).
+        </p>
+    </div>
+      
+    </section>
+    
+    <section id="hogyan">
+    <div class="container">
+            <h1 align="center">Hogyan beszélnek a parlamentben?<br></h1>
+            <p>
+            A lexikai diverzitás a legegyszerűbb mérőszáma annak, hogy egy adott szövegben mekkora a szóismétlések gyakorisága. Értékét úgy kapjuk meg, hogy a vizsgált szöveg szavainak számát elosztjuk a szöveg egyedi szavainak számával, például a “lenni vagy nem lenni” kifejezésben négy szó és három egyedi szó fordul elő, így lexikai diverzitása 4/3 (kerekítve 1.33). Látható, hogy minél magasabb ez az érték, annyival gyakrabban vannak szóismétlések a vizsgált szövegben. Könnyű belátni, hogy ez a mutató érzékeny a szöveg hosszára, az egyszavas “Igen” diverzitása egy, még egy átlagos magyar online cikk érték öt körül szokott lenni. 
+            </p>
+    </div>
+    
+    <div class="container">
+            <h2 align="center">A felszólalások átlagos hossza karakterben pártonként<br></h2>
+            <iframe src="vizs/party_length.html" style="width: 80vw; height:80vh;" scrolling="No" frameborder="0" hspace="0" ></iframe>
+    </div>
+      
+    <div class="container">
+            <h2 align="center">A felszólalások átlagos lexikai diverzitása<br></h2>
+            <iframe src="vizs/avg_ld.html" style="width: 80vw; height:80vh;" scrolling="No" frameborder="0" hspace="0" ></iframe>
+    </div>  
+    
+    <div class="container">
+            <h2 align="center">Lexikai diverzitás pártonként<br></h2>
+            <iframe src="vizs/party_ld.html" style="width: 80vw; height:80vh;" scrolling="No" frameborder="0" hspace="0" ></iframe>
+    </div>  
+    </section>
+    
+    <div class="container">
+            <p>
+            De mit árul el egy beszélőről szövegeinek lexikai diverzitása? Sajnos a magyar nyelv esetében nem ismertek széleskörű adatok arra nézve, hogy különböző nemű, korú és iskolázottságú emberek esetében hogyan alakul ez a mutató írot és beszélt nyelv esetében. A nemzetközi kutatások alapján annyit elmondhatunk, hogy a kor és iskolázottság hatással van a lexikai diverzitásra, de leginkább attól függ, hogy a szöveg milyen köntextusban született, illetve, hogy spontán vagy szerkesztett e. Ennek tükrében megállapíthatjuk, hogy az első magyar országgyűlésben elhangzott szövegek erősen szerkesztettek és formálisak voltak. Ha a topikokat tartalmazó ábrára is vetünk egy pillantást, akkor láthatjuk, hogy a “Formaságok” téma uralja ezt az időszakot, azaz sok kérdés, köszönet nyilvánítás, rövid megjegyzés hangzott el az 1990 és 1994 közötti ülésnapokon.<br>
+            </p>
+            <p>
+            1995-ben hirtelen ugrás történik (azaz megnő egy szó átlagos ismétlésének száma), de ez a megugrás 1995-től egészen 2014-ig állandósul az 1.3 körüli értéknél kisebb-nagyobb kitéresekkel. A legutóbb megválasztott parlamentben elhangzott felszólalások esetében azonban hirtelen sokkal nagyobb kilengések jelennek meg. Ha vetünk egy pillantást a lexikai diverzitást pártok szerinti bontásban ábrázoló plotra, láthatjuk, hogy ennek oka a Fidesz és a KDNP felszólalásainak megváltozásában keresendő.<br>
+            </p>
+        
+            <p>
+            Mielőtt bárki azt a messzemenő következtetést vonná le, hogy a parlament nyelvhasználata lezüllött 1990 óta, emlékezzünk arra, hogy az online sajtó lexikai diverzitása öt körül van, ilyen magas értéket csak 2016 júliusában produkált a Fidesz. A sajtó nyelve erősen szerkesztett, messze áll a beszélt nyelvtől ami tele van szóismétlésekkel, félbehagyott mondatokkal, kihagyásokkal, közbeiktatásokkal még tanult emberek esetében is. A nyelv része, hogy redundáns, sokszor ismétlünk, mindent megerősítünk verbális és nonverbális eszközökkel is, ezért egy hosszú, teljesen spontán beszéd lexikai diverzitása akár tíz felett is lehet. De az ismétlések magas száma sem mond semmit a szöveg minőségéről, hiszen a versek és dalszövegek tele vannak refrénekkel, ami sokszor inkább növeli, mint csökkenti esztétikai értéküket. Amit láthatunk, az inkább a sajtónyelvnek való megfelelésnek tudható be, korábbi szabad sajtó hiányában érthető hogy az első parlament képviselői inkább más formákhoz nyúltak, de 94 után fontossá vált, hogy egy felszólalás idézhető is legyen, amit úgy látszik hamar megtanultak a politikusok.<br>
+            </p>
+    </div>
+    
+      
+    <section id="mirol">
+    <div class="container">
+            <h1 align="center">Miről beszélnek a parlamentben?<br></h1>
+            <p>
+            Megnéztük, hogy összességében milyen témák voltak leginkább napirenden a rendszerváltás óta eltelt negyedszázadban. (A látens Dirichlet allokáció gépi tanulást alkalmazó algoritmus segítségével összesen 19 csoportot, és az ezeket alkotó legjellemzőbb szavakat sikerült azonosítani.) A módszertanról részletesebben lásd a Precognox egy korábbi <a href="http://labs.precognox.com/kuruc-info-visualization/">elemzését</a>. Az egyes témákat, avagy topikokat a hozzájuk tartozó szavak alapján neveztük el: mely téma volt az, amit a legátütőbbnek éreztünk. A topikok elnevezései szubjektívek és a módszertan sajátosságaiból fakadóan nem vegytiszták. A projekt későbbi szakaszán ezek a topikok változhatnak, bővülhetnek. Az első ábrán azt tekintjük át, hogy az egyes években miről beszéltek inkább a parlamenti képviselők. A pontokra állva látható, hogy az adott évben az adott téma a parlamenti beszédek mekkora részét képezte. A második ábrán pedig ugyanígy az oszlopokra állva láthatókká válnak a témákat alkotó szavak is a teljes időszakra.<br>
+            </p>
+    </div>
+    <div class="container">
+           <div class="infogram-embed" data-id="719418ae-2801-44a7-840d-39247374c72a" data-type="interactive" data-title="topikmodell"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script"),d=o[0],r=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=r+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var a=e.createElement("script");a.async=1,a.id=s,a.src=i,d.parentNode.insertBefore(a,d)}}(document,0,"infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/719418ae-2801-44a7-840d-39247374c72a" style="color:#989898!important;text-decoration:none!important;" target="_blank">topikmodell</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    </div>
+        
+    <div class="container">
+            <p>
+            Az talán nem meglepő, hogy a parlamenti vita a legjellemzőbb topik, itt találhatók a parlamenti liturgiához kapcsolódó szavak. Az már inkább érdekesnek tűnik, hogy arányaiban az oktatás, a család- és a szociálpolitika milyen kevéssé hangsúlyos témák a parlamenti megszólalások teljes korpuszához képest. A médiával és korrupcióval asszociált klaszter a 2000-es évek fordulóján és a 2010-es években mutat kiugrást, részben vélhetően a médiatörvény-csomaggal kapcsolatos viták miatt. Az adóügyek, nyugdíj, társadalombiztosítás (TB) témaköre állandóan napirenden van a Parlamentben, legnagyobb intenzitással 2011-ben. Az energia és sporttal kapcsolatos csoport a legutóbbi időkben vált igen hangsúlyossá - ez a topik tartalmazza a labdarúgással és atomenergiával kapcsolatos beszédeket. Az önkormányzat, alkotmány elnevezésű topikból kivehető az alaptörvényhez köthető vita 2011-ben. A mezőgazdaság, vidékfejlesztés témán a földtörvények hagytak nyomot a rendszerváltás óta.<br>
+            </p>
+    </div>
+    </section>
+    
+    <section id="sum">
+    <div class="container">
+            <h1 align="center">Összefoglaló<br></h1>
+            <p>
+            Ezzel a betekintéssel egy átfogó képet szerettünk volna nyújtani arról a fejlesztésről, amelyet a parlamenti beszédek jobb kereshetősége érdekében végzünk. A projekt fő célja, hogy a parlamenti üléseken elhangzott beszédeket a rendszerváltástól napjainkig könnyen elérhetővé tegyük újságírók, kutatók és a közügyek iránt érdeklődő állampolgárok számára. Mindezt egy egyszerűen kezelhető oldalon keresztül akár összetett keresésekkel is elvégezhetnénk azáltal, hogy szűrhetünk a találatok között. További terveink között szerepel annak bemutatása, hogyan változott az egyes politikusok legjellemzőbb szókészlete időrendben, illetve összehasonlíthatóvá tennénk az egyes politikusok, illetve pártok beszédeit ugyanezen paraméter alapján.<br>
+            </p>
+            <p>
+                <img src="img/heatmap.png" alt="heatmap" width="70%" height="70%" align="middle">
+            </p>
+    </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    
+    <section id="contact">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; <a href="http://k-monitor.hu/">K-Monitor</a> 2017</p>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">K-Monitor<br></h2>
+            <hr class="my-4">
+            <p class="mb-5">A projektet a <a href="http://k-monitor.hu/">K-Monitor</a> a <a href="http://openparlweek.org/">Global Legislative Openness Week</a> keretében készítette.</p>
+          </div>
+        </div>
       </div>
-      <!-- /.container -->
-    </footer>
+    </section>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
 
   </body>
 
