@@ -8,7 +8,7 @@
     </head>
     <body>
         
-    <div id="chart"><svg style="width:1300px;height:700px;"></svg></div>
+    <div id="chart"><svg style="width:100vw; height:100vh;"></svg></div>
 
 
     <script>
@@ -19,6 +19,9 @@
 
 
         nv.addGraph(function() {
+        var svg, width, height;
+        width = window.innerWidth;
+        height = window.innerHeight;
         var chart = nv.models.lineChart();
 
         chart.margin({top: 30, right: 60, bottom: 20, left: 60});
@@ -58,8 +61,8 @@
             d3.select('#chart svg')
             .datum(datum)
             .transition().duration(500)
-            .attr('width', "100%")
-            .attr('height', "300%")
+            .attr('width', width)
+            .attr('height', height)
             .call(chart);
 
 
