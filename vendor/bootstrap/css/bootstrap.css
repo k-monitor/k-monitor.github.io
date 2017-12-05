@@ -632,6 +632,16 @@ pre code {
   overflow-y: scroll;
 }
 
+.social li{
+    display:inline;
+}  
+
+
+.fb-share-button{
+    position:relative;
+    top: 30px;
+}
+
 .container {
   width: 100%;
   height: auto;
